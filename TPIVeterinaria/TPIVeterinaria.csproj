@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBC22F2D-B2FC-4AB3-B31D-124356C318AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TPIVeterinaria</RootNamespace>
+    <AssemblyName>TPIVeterinaria</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActualizarRaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarRaza.Designer.cs">
+      <DependentUpon>ActualizarRaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarTurno.Designer.cs">
+      <DependentUpon>ActualizarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarNuevaConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarNuevaConsulta.Designer.cs">
+      <DependentUpon>AgregarNuevaConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarBarrios.Designer.cs">
+      <DependentUpon>AgregarBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCargo.Designer.cs">
+      <DependentUpon>AgregarCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarClientes.Designer.cs">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarConsultas.Designer.cs">
+      <DependentUpon>AgregarConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarDiagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarDiagnostico.Designer.cs">
+      <DependentUpon>AgregarDiagnostico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarEmpleado.Designer.cs">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEspecie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarEspecie.Designer.cs">
+      <DependentUpon>AgregarEspecie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMedicamentos.Designer.cs">
+      <DependentUpon>AgregarMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMotivo.Designer.cs">
+      <DependentUpon>AgregarMotivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarNuevaRaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarNuevaRaza.Designer.cs">
+      <DependentUpon>AgregarNuevaRaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarNuevoMotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarNuevoMotivo.Designer.cs">
+      <DependentUpon>AgregarNuevoMotivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarNuevoTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarNuevoTurno.Designer.cs">
+      <DependentUpon>AgregarNuevoTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProveedor.Designer.cs">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarRaza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarRaza.Designer.cs">
+      <DependentUpon>AgregarRaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarServicio.Designer.cs">
+      <DependentUpon>AgregarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarTipoDocumento.Designer.cs">
+      <DependentUpon>AgregarTipoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarTurno.Designer.cs">
+      <DependentUpon>AgregarTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarVacunas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarVacunas.Designer.cs">
+      <DependentUpon>AgregarVacunas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarMedCodigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarMedCodigo.Designer.cs">
+      <DependentUpon>BuscarMedCodigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarMedPorDescripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarMedPorDescripcion.Designer.cs">
+      <DependentUpon>BuscarMedPorDescripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProveedorCodigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarProveedorCodigo.Designer.cs">
+      <DependentUpon>BuscarProveedorCodigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProvPorNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarProvPorNombre.Designer.cs">
+      <DependentUpon>BuscarProvPorNombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarvacunaXcod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarvacunaXcod.Designer.cs">
+      <DependentUpon>BuscarvacunaXcod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarvacXnom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarvacXnom.Designer.cs">
+      <DependentUpon>BuscarvacXnom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoDeDatos\DatosEstadisticos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEstadisticos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCliente.Designer.cs">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Barrio.cs" />
+    <Compile Include="Entidades\Cargo.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Consulta.cs" />
+    <Compile Include="Entidades\Diagnostico.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
+    <Compile Include="Entidades\Especie.cs" />
+    <Compile Include="Entidades\Mascotas.cs" />
+    <Compile Include="Entidades\Medicamentos.cs" />
+    <Compile Include="Entidades\Motivo.cs" />
+    <Compile Include="Entidades\Proveedores.cs" />
+    <Compile Include="Entidades\Raza.cs" />
+    <Compile Include="Entidades\Servicio.cs" />
+    <Compile Include="Entidades\TipoDocumento.cs" />
+    <Compile Include="Entidades\Turno.cs" />
+    <Compile Include="Entidades\UsuarioEmpleado.cs" />
+    <Compile Include="Entidades\Vacunas.cs" />
+    <Compile Include="Funcionalidades\AD_ActualizarDatos.cs" />
+    <Compile Include="Funcionalidades\AD_AgregarDatosBD.cs" />
+    <Compile Include="Funcionalidades\AD_CargarCombos.cs" />
+    <Compile Include="Funcionalidades\AD_CargarGrillas.cs" />
+    <Compile Include="Funcionalidades\AD_EliminarDatos.cs" />
+    <Compile Include="Funcionalidades\AD_Informes.cs" />
+    <Compile Include="Funcionalidades\AD_ObtenerDatos.cs" />
+    <Compile Include="InformeClienteMascotas\EstadisticaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeClienteMascotas\EstadisticaCliente.Designer.cs">
+      <DependentUpon>EstadisticaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeClienteMascotas\EstadisticasMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeClienteMascotas\EstadisticasMascota.Designer.cs">
+      <DependentUpon>EstadisticasMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeClienteMascotas\InformeCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeClienteMascotas\InformeCliente.Designer.cs">
+      <DependentUpon>InformeCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeClienteMascotas\InformeMascotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeClienteMascotas\InformeMascotas.Designer.cs">
+      <DependentUpon>InformeMascotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeClienteMascotas\ReporDataSource.cs" />
+    <Compile Include="InformeClienteMascotas\TablasDeEstadisticas.cs">
+      <DependentUpon>TablasDeEstadisticas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InformeClienteMascotas\TablasDeEstadisticas.Designer.cs">
+      <DependentUpon>TablasDeEstadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformesVarios\EstadisticaBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformesVarios\EstadisticaBarrio.Designer.cs">
+      <DependentUpon>EstadisticaBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformesVarios\EstadisticaCargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformesVarios\EstadisticaCargos.Designer.cs">
+      <DependentUpon>EstadisticaCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformesVarios\ListadoBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformesVarios\ListadoBarrios.Designer.cs">
+      <DependentUpon>ListadoBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformesVarios\ListadoDiagnosticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformesVarios\ListadoDiagnosticos.Designer.cs">
+      <DependentUpon>ListadoDiagnosticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeTurnosConsultas\EstadisticasConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeTurnosConsultas\EstadisticasConsultas.Designer.cs">
+      <DependentUpon>EstadisticasConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeTurnosConsultas\EstadisticasTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeTurnosConsultas\EstadisticasTurnos.Designer.cs">
+      <DependentUpon>EstadisticasTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeTurnosConsultas\InformeConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeTurnosConsultas\InformeConsultas.Designer.cs">
+      <DependentUpon>InformeConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeTurnosConsultas\InformeTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeTurnosConsultas\InformeTurnos.Designer.cs">
+      <DependentUpon>InformeTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarConsulta.Designer.cs">
+      <DependentUpon>ModificarConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarMotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarMotivo.Designer.cs">
+      <DependentUpon>ModificarMotivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaLogin.Designer.cs">
+      <DependentUpon>PantallaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaPrincipal1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipal1.designer.cs">
+      <DependentUpon>PantallaPrincipal1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaPrincipal2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipal2.Designer.cs">
+      <DependentUpon>PantallaPrincipal2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaPrincipal3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipal3.Designer.cs">
+      <DependentUpon>PantallaPrincipal3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaPrincipal4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaPrincipal4.Designer.cs">
+      <DependentUpon>PantallaPrincipal4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantalla_AgregarDiagosticoXConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla_AgregarDiagosticoXConsulta.Designer.cs">
+      <DependentUpon>Pantalla_AgregarDiagosticoXConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantalla_AgregarMedicamentoXConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla_AgregarMedicamentoXConsulta.Designer.cs">
+      <DependentUpon>Pantalla_AgregarMedicamentoXConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantalla_AgregarVacunasAConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla_AgregarVacunasAConsulta.Designer.cs">
+      <DependentUpon>Pantalla_AgregarVacunasAConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteEstadisticaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteEstadisticaEmpleado.Designer.cs">
+      <DependentUpon>ReporteEstadisticaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteListadoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteListadoEmpleados.Designer.cs">
+      <DependentUpon>ReporteListadoEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="veterinariaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>veterinariaDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActualizarRaza.resx">
+      <DependentUpon>ActualizarRaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActualizarTurno.resx">
+      <DependentUpon>ActualizarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarBarrios.resx">
+      <DependentUpon>AgregarBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarCargo.resx">
+      <DependentUpon>AgregarCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarClientes.resx">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarConsultas.resx">
+      <DependentUpon>AgregarConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarDiagnostico.resx">
+      <DependentUpon>AgregarDiagnostico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarEmpleado.resx">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarEspecie.resx">
+      <DependentUpon>AgregarEspecie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMedicamentos.resx">
+      <DependentUpon>AgregarMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMotivo.resx">
+      <DependentUpon>AgregarMotivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarNuevaConsulta.resx">
+      <DependentUpon>AgregarNuevaConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarNuevaRaza.resx">
+      <DependentUpon>AgregarNuevaRaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarNuevoMotivo.resx">
+      <DependentUpon>AgregarNuevoMotivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarNuevoTurno.resx">
+      <DependentUpon>AgregarNuevoTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProveedor.resx">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarRaza.resx">
+      <DependentUpon>AgregarRaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarServicio.resx">
+      <DependentUpon>AgregarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarTipoDocumento.resx">
+      <DependentUpon>AgregarTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarTurno.resx">
+      <DependentUpon>AgregarTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarVacunas.resx">
+      <DependentUpon>AgregarVacunas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarMedCodigo.resx">
+      <DependentUpon>BuscarMedCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarMedPorDescripcion.resx">
+      <DependentUpon>BuscarMedPorDescripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarProveedorCodigo.resx">
+      <DependentUpon>BuscarProveedorCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarProvPorNombre.resx">
+      <DependentUpon>BuscarProvPorNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarvacunaXcod.resx">
+      <DependentUpon>BuscarvacunaXcod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarvacXnom.resx">
+      <DependentUpon>BuscarvacXnom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCliente.resx">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadisticaEmpleado.rdlc" />
+    <EmbeddedResource Include="InformeClienteMascotas\EstadisticaCliente.resx">
+      <DependentUpon>EstadisticaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeClienteMascotas\EstadisticasCliente.rdlc" />
+    <EmbeddedResource Include="InformeClienteMascotas\EstadisticasMascota.resx">
+      <DependentUpon>EstadisticasMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeClienteMascotas\InformeCliente.resx">
+      <DependentUpon>InformeCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeClienteMascotas\InformeMascotas.resx">
+      <DependentUpon>InformeMascotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeClienteMascotas\ReportClientes.rdlc" />
+    <EmbeddedResource Include="InformeClienteMascotas\ReportMascotas.rdlc" />
+    <EmbeddedResource Include="InformeClienteMascotas\ReportMascotasXEspecie.rdlc" />
+    <EmbeddedResource Include="InformeClienteMascotas\ReportMascotasXSexo.rdlc" />
+    <EmbeddedResource Include="InformeClienteMascotas\ReportMascotaXRaza.rdlc" />
+    <EmbeddedResource Include="InformesVarios\EstadisticaBarrio.resx">
+      <DependentUpon>EstadisticaBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformesVarios\EstadisticaCargos.resx">
+      <DependentUpon>EstadisticaCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformesVarios\EstadisticaCargosDeEmpleados.rdlc" />
+    <EmbeddedResource Include="InformesVarios\EstadisticaClienesXBarrio.rdlc" />
+    <EmbeddedResource Include="InformesVarios\ListadoBarrios.resx">
+      <DependentUpon>ListadoBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformesVarios\ListadoDiagnosticos.resx">
+      <DependentUpon>ListadoDiagnosticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformesVarios\ListBarrios.rdlc" />
+    <EmbeddedResource Include="InformesVarios\ListDiagnostico.rdlc" />
+    <EmbeddedResource Include="InformeTurnosConsultas\EstadisticasConsultas.rdlc" />
+    <EmbeddedResource Include="InformeTurnosConsultas\EstadisticasConsultas.resx">
+      <DependentUpon>EstadisticasConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeTurnosConsultas\EstadisticasTurnos.rdlc" />
+    <EmbeddedResource Include="InformeTurnosConsultas\EstadisticasTurnos.resx">
+      <DependentUpon>EstadisticasTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeTurnosConsultas\InformeConsultas.rdlc" />
+    <EmbeddedResource Include="InformeTurnosConsultas\InformeConsultas.resx">
+      <DependentUpon>InformeConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeTurnosConsultas\InformeTurnos.rdlc" />
+    <EmbeddedResource Include="InformeTurnosConsultas\InformeTurnos.resx">
+      <DependentUpon>InformeTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoDeEmpleadosIngresadosEnJulio.rdlc" />
+    <EmbeddedResource Include="ModificarConsulta.resx">
+      <DependentUpon>ModificarConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarMotivo.resx">
+      <DependentUpon>ModificarMotivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaLogin.resx">
+      <DependentUpon>PantallaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal1.resx">
+      <DependentUpon>PantallaPrincipal1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal2.resx">
+      <DependentUpon>PantallaPrincipal2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal3.resx">
+      <DependentUpon>PantallaPrincipal3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal4.resx">
+      <DependentUpon>PantallaPrincipal4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalla_AgregarDiagosticoXConsulta.resx">
+      <DependentUpon>Pantalla_AgregarDiagosticoXConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalla_AgregarMedicamentoXConsulta.resx">
+      <DependentUpon>Pantalla_AgregarMedicamentoXConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalla_AgregarVacunasAConsulta.resx">
+      <DependentUpon>Pantalla_AgregarVacunasAConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEstadisticaEmpleado.resx">
+      <DependentUpon>ReporteEstadisticaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteListadoEmpleados.resx">
+      <DependentUpon>ReporteListadoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ConjuntoDeDatos\DatosEstadisticos.xsc">
+      <DependentUpon>DatosEstadisticos.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosEstadisticos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEstadisticos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosEstadisticos.xss">
+      <DependentUpon>DatosEstadisticos.xsd</DependentUpon>
+    </None>
+    <None Include="InformeClienteMascotas\TablasDeEstadisticas.xsc">
+      <DependentUpon>TablasDeEstadisticas.xsd</DependentUpon>
+    </None>
+    <None Include="InformeClienteMascotas\TablasDeEstadisticas.xsd" />
+    <None Include="InformeClienteMascotas\TablasDeEstadisticas.xss">
+      <DependentUpon>TablasDeEstadisticas.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="veterinariaDataSet.xsc">
+      <DependentUpon>veterinariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="veterinariaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>veterinariaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="veterinariaDataSet.xss">
+      <DependentUpon>veterinariaDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrellas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cielo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botones-web-brillante-establecidos-diferentes-colores_1017-17868.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_key-lock-unlock-clef_2931164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%288%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%286%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botones-web-brillante-establecidos-diferentes-colores_1017-17868%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_plus-add-new-create-attach-maximize_2931155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_add-outline_3017947.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Cute Ball - Go_32133.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%288%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_toggle-expand_blue_68822.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_reload_46828.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_renew_4168571.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_check_2467374.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_add-fill_3017948.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_renew_41685711.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_search_2427697.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_trash-delete-remove_2931168.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_delete_2460293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botones-web-brillante-establecidos-diferentes-colores_1017-17868%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_new-document-empty-file-sheet_2931173.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com%288%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

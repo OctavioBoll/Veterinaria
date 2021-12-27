@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TablasEstadisticas" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TablasEstadisticas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TablasEstadisticas" msprop:Generator_UserDSName="TablasEstadisticas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TablaEstadisticaCliente" msprop:Generator_TableClassName="TablaEstadisticaClienteDataTable" msprop:Generator_TableVarName="tableTablaEstadisticaCliente" msprop:Generator_TablePropName="TablaEstadisticaCliente" msprop:Generator_RowDeletingName="TablaEstadisticaClienteRowDeleting" msprop:Generator_RowChangingName="TablaEstadisticaClienteRowChanging" msprop:Generator_RowEvHandlerName="TablaEstadisticaClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaEstadisticaClienteRowDeleted" msprop:Generator_UserTableName="TablaEstadisticaCliente" msprop:Generator_RowChangedName="TablaEstadisticaClienteRowChanged" msprop:Generator_RowEvArgName="TablaEstadisticaClienteRowChangeEvent" msprop:Generator_RowClassName="TablaEstadisticaClienteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="TipoDocumento" msprop:Generator_ColumnVarNameInTable="columnTipoDocumento" msprop:Generator_ColumnPropNameInRow="TipoDocumento" msprop:Generator_ColumnPropNameInTable="TipoDocumentoColumn" msprop:Generator_UserColumnName="TipoDocumento" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TablaMascotaRaza" msprop:Generator_TableClassName="TablaMascotaRazaDataTable" msprop:Generator_TableVarName="tableTablaMascotaRaza" msprop:Generator_TablePropName="TablaMascotaRaza" msprop:Generator_RowDeletingName="TablaMascotaRazaRowDeleting" msprop:Generator_RowChangingName="TablaMascotaRazaRowChanging" msprop:Generator_RowEvHandlerName="TablaMascotaRazaRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaMascotaRazaRowDeleted" msprop:Generator_UserTableName="TablaMascotaRaza" msprop:Generator_RowChangedName="TablaMascotaRazaRowChanged" msprop:Generator_RowEvArgName="TablaMascotaRazaRowChangeEvent" msprop:Generator_RowClassName="TablaMascotaRazaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="TipoRaza" msprop:Generator_ColumnVarNameInTable="columnTipoRaza" msprop:Generator_ColumnPropNameInRow="TipoRaza" msprop:Generator_ColumnPropNameInTable="TipoRazaColumn" msprop:Generator_UserColumnName="TipoRaza" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TablaMascotaEspecie" msprop:Generator_TableClassName="TablaMascotaEspecieDataTable" msprop:Generator_TableVarName="tableTablaMascotaEspecie" msprop:Generator_TablePropName="TablaMascotaEspecie" msprop:Generator_RowDeletingName="TablaMascotaEspecieRowDeleting" msprop:Generator_RowChangingName="TablaMascotaEspecieRowChanging" msprop:Generator_RowEvHandlerName="TablaMascotaEspecieRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaMascotaEspecieRowDeleted" msprop:Generator_UserTableName="TablaMascotaEspecie" msprop:Generator_RowChangedName="TablaMascotaEspecieRowChanged" msprop:Generator_RowEvArgName="TablaMascotaEspecieRowChangeEvent" msprop:Generator_RowClassName="TablaMascotaEspecieRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="TipoEspecie" msprop:Generator_ColumnVarNameInTable="columnTipoEspecie" msprop:Generator_ColumnPropNameInRow="TipoEspecie" msprop:Generator_ColumnPropNameInTable="TipoEspecieColumn" msprop:Generator_UserColumnName="TipoEspecie" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TablaMascotaSexo" msprop:Generator_TableClassName="TablaMascotaSexoDataTable" msprop:Generator_TableVarName="tableTablaMascotaSexo" msprop:Generator_TablePropName="TablaMascotaSexo" msprop:Generator_RowDeletingName="TablaMascotaSexoRowDeleting" msprop:Generator_RowChangingName="TablaMascotaSexoRowChanging" msprop:Generator_RowEvHandlerName="TablaMascotaSexoRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaMascotaSexoRowDeleted" msprop:Generator_UserTableName="TablaMascotaSexo" msprop:Generator_RowChangedName="TablaMascotaSexoRowChanged" msprop:Generator_RowEvArgName="TablaMascotaSexoRowChangeEvent" msprop:Generator_RowClassName="TablaMascotaSexoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="TipoSexo" msprop:Generator_ColumnVarNameInTable="columnTipoSexo" msprop:Generator_ColumnPropNameInRow="TipoSexo" msprop:Generator_ColumnPropNameInTable="TipoSexoColumn" msprop:Generator_UserColumnName="TipoSexo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TablaBarrio" msprop:Generator_TableClassName="TablaBarrioDataTable" msprop:Generator_TableVarName="tableTablaBarrio" msprop:Generator_RowChangedName="TablaBarrioRowChanged" msprop:Generator_TablePropName="TablaBarrio" msprop:Generator_RowDeletingName="TablaBarrioRowDeleting" msprop:Generator_RowChangingName="TablaBarrioRowChanging" msprop:Generator_RowEvHandlerName="TablaBarrioRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaBarrioRowDeleted" msprop:Generator_RowClassName="TablaBarrioRow" msprop:Generator_UserTableName="TablaBarrio" msprop:Generator_RowEvArgName="TablaBarrioRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="Barrio" msprop:Generator_ColumnVarNameInTable="columnBarrio" msprop:Generator_ColumnPropNameInRow="Barrio" msprop:Generator_ColumnPropNameInTable="BarrioColumn" msprop:Generator_UserColumnName="Barrio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TablaCargo" msprop:Generator_TableClassName="TablaCargoDataTable" msprop:Generator_TableVarName="tableTablaCargo" msprop:Generator_RowChangedName="TablaCargoRowChanged" msprop:Generator_TablePropName="TablaCargo" msprop:Generator_RowDeletingName="TablaCargoRowDeleting" msprop:Generator_RowChangingName="TablaCargoRowChanging" msprop:Generator_RowEvHandlerName="TablaCargoRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaCargoRowDeleted" msprop:Generator_RowClassName="TablaCargoRow" msprop:Generator_UserTableName="TablaCargo" msprop:Generator_RowEvArgName="TablaCargoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cargo" msprop:Generator_ColumnVarNameInTable="columnCargo" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" msprop:Generator_UserColumnName="Cargo" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TablaEstadisticasTurnos" msprop:Generator_TableClassName="TablaEstadisticasTurnosDataTable" msprop:Generator_TableVarName="tableTablaEstadisticasTurnos" msprop:Generator_TablePropName="TablaEstadisticasTurnos" msprop:Generator_RowDeletingName="TablaEstadisticasTurnosRowDeleting" msprop:Generator_RowChangingName="TablaEstadisticasTurnosRowChanging" msprop:Generator_RowEvHandlerName="TablaEstadisticasTurnosRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaEstadisticasTurnosRowDeleted" msprop:Generator_UserTableName="TablaEstadisticasTurnos" msprop:Generator_RowChangedName="TablaEstadisticasTurnosRowChanged" msprop:Generator_RowEvArgName="TablaEstadisticasTurnosRowChangeEvent" msprop:Generator_RowClassName="TablaEstadisticasTurnosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dia" msprop:Generator_ColumnVarNameInTable="columnDia" msprop:Generator_ColumnPropNameInRow="Dia" msprop:Generator_ColumnPropNameInTable="DiaColumn" msprop:Generator_UserColumnName="Dia" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cant_Turnos" msprop:Generator_ColumnVarNameInTable="columnCant_Turnos" msprop:Generator_ColumnPropNameInRow="Cant_Turnos" msprop:Generator_ColumnPropNameInTable="Cant_TurnosColumn" msprop:Generator_UserColumnName="Cant_Turnos" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TablaEstadisticasConsultas" msprop:Generator_TableClassName="TablaEstadisticasConsultasDataTable" msprop:Generator_TableVarName="tableTablaEstadisticasConsultas" msprop:Generator_TablePropName="TablaEstadisticasConsultas" msprop:Generator_RowDeletingName="TablaEstadisticasConsultasRowDeleting" msprop:Generator_RowChangingName="TablaEstadisticasConsultasRowChanging" msprop:Generator_RowEvHandlerName="TablaEstadisticasConsultasRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaEstadisticasConsultasRowDeleted" msprop:Generator_UserTableName="TablaEstadisticasConsultas" msprop:Generator_RowChangedName="TablaEstadisticasConsultasRowChanged" msprop:Generator_RowEvArgName="TablaEstadisticasConsultasRowChangeEvent" msprop:Generator_RowClassName="TablaEstadisticasConsultasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dia" msprop:Generator_ColumnVarNameInTable="columnDia" msprop:Generator_ColumnPropNameInRow="Dia" msprop:Generator_ColumnPropNameInTable="DiaColumn" msprop:Generator_UserColumnName="Dia" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cant_Consultas" msprop:Generator_ColumnVarNameInTable="columnCant_Consultas" msprop:Generator_ColumnPropNameInRow="Cant_Consultas" msprop:Generator_ColumnPropNameInTable="Cant_ConsultasColumn" msprop:Generator_UserColumnName="Cant_Consultas" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
